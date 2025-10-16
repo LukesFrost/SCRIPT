@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hledání největší hodnoty</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="w3-light-blue">
+    <div class="w3-container w3-margin-top w3-center">
+        <div class="w3-card w3-white w3-padding-large w3-round-large w3-display-inline-block" style="min-width:300px;max-width:400px;">
+            <h2 class="w3-text-blue">Najdi největší číslo</h2>
+            <form id="maxForm" class="w3-container">
+                <label class="w3-text-grey">První číslo:</label>
+                <input class="w3-input w3-border w3-margin-bottom" type="number" id="num1" name="num1" autocomplete="off" required>
+
+                <label class="w3-text-grey">Druhé číslo:</label>
+                <input class="w3-input w3-border w3-margin-bottom" type="number" id="num2" name="num2" autocomplete="off" required>
+
+                <label class="w3-text-grey">Třetí číslo:</label>
+                <input class="w3-input w3-border w3-margin-bottom" type="number" id="num3" name="num3" autocomplete="off" required>
+
+                <button type="button" onclick="hledaniMax();" class="w3-button w3-blue w3-margin-top w3-round-large" id="findMaxBtn">
+                    Najít největší
+                </button>
+            </form>
+            <div class="w3-panel w3-pale-green w3-margin-top w3-round-large" id="output" style="height: 50px; border: 2px solid rgb(57, 136, 255);">
+                <!-- Výsledek se zobrazí zde jako textové pole (array) -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
