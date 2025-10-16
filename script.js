@@ -10,26 +10,26 @@ function hledaniMax() {
     const number3 = Number(cislo3.value);
 
     let max = number1;
+    let MaximumKde = "1.";
+
     if (number2 > max) {
         max = number2;
+        MaximumKde = "2.";
+    }
+    else {
+        if (number2==max) {
+            MaximumKde += "2.";
+        }
     }
     if (number3 > max) {
         max = number3;
+        MaximumKde = "3.";
+    }
+    else {
+        if (number3 == max) {
+            MaximumKde += "3.";
+        }
     }
 
-    let poziceText = "";
-    let prvni = true;
-    if (number1 === max) {
-        poziceText += "Číslo 1";
-        prvni = false;
-    }
-    if (number2 === max) {
-        poziceText += (prvni ? "" : ", ") + "Číslo 2";
-        prvni = false;
-    }
-    if (number3 === max) {
-        poziceText += (prvni ? "" : ", ") + "Číslo 3";
-    }
-
-    vysledek.textContent = `Největší číslo je ${max}, nalezeno v pozicích: ${poziceText}.`;
+    vysledek.textContent = `Největší číslo je ${max}, nalezeno v pozicích: ${MaximumKde}`;
 }
