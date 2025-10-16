@@ -10,19 +10,29 @@ function hledaniMax() {
     const number2 = Number(cislo2.value);
     const number3 = Number(cislo3.value);
 
+    // Najdi maximum
     let max = number1;
-    let pozice = 1;
-
     if (number2 > max) {
         max = number2;
-        pozice = 2;
     }
-    // Pokud je number2 stejné jako max, pozice zůstává 1 (první výskyt)
     if (number3 > max) {
         max = number3;
-        pozice = 3;
     }
-    // Pokud je number3 stejné jako max, pozice zůstává na první výskyt
 
-    vysledek.textContent = `Největší číslo je ${max}, nalezeno v pozici Čísla ${pozice}.`;
+    // Sestav seznam pozic, kde se maximum vyskytuje
+    let poziceText = "";
+    let prvni = true;
+    if (number1 === max) {
+        poziceText += "Číslo 1";
+        prvni = false;
+    }
+    if (number2 === max) {
+        poziceText += (prvni ? "" : ", ") + "Číslo 2";
+        prvni = false;
+    }
+    if (number3 === max) {
+        poziceText += (prvni ? "" : ", ") + "Číslo 3";
+    }
+
+    vysledek.textContent = `Největší číslo je ${max}, nalezeno v pozicích: ${poziceText}.`;
 }
