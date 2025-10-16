@@ -5,12 +5,10 @@ const cislo3 = document.getElementById("cislo3");
 const vysledek = document.getElementById("vysledek");
 
 function hledaniMax() {
-    // Získání hodnot a konverze na čísla
     const number1 = Number(cislo1.value);
     const number2 = Number(cislo2.value);
     const number3 = Number(cislo3.value);
 
-    // Najdi maximum
     let max = number1;
     if (number2 > max) {
         max = number2;
@@ -19,7 +17,6 @@ function hledaniMax() {
         max = number3;
     }
 
-    // Sestav seznam pozic, kde se maximum vyskytuje
     let poziceText = "";
     let prvni = true;
     if (number1 === max) {
